@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./mypf/WhatsApp Image 2025-03-25 at 13.27.27_277be2a9.jpg" type="image/x-icon">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./project.css">
+
+    <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="../../maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    
+        <h1>📚Book Management System</h1>
+        <input type="text" id="searchInput" placeholder=" 🔎 Search books...">
+    <div class="Add-btm">
+        <button type="button" id="addBookBtn">+ Add Book</button>
+    </div>
+    
+
+    <div class="tabs">
+        <button type="button" class="tab active" data-category="all">All Books</button>
+        <button type="button" class="tab" data-category="favorites">Favorites</button>
+        <button type="button" class="tab" data-category="unread">Unread</button>
+        <button type="button" class="tab" data-category="read">Read</button>
+    </div>
+
+    
+  
+  
+
+    <div id="bookList" class="book-grid"></div>
+
+    <!-- Add/Edit Book Modal -->
+    <div id="bookModal" class="modal">
+        <div class="modal-content">
+            <span class="close">❌</span>  <!--&times  (This also displays a closing sign or exit as x )-->
+            <h2 id="modalTitle">Add Book</h2>
+            <form id="bookForm">
+                <input type="hidden" id="bookId">
+                <input type="text" id="title" placeholder="Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="text" id="genre" placeholder="Genre" required>
+                <select title="select" id="status">
+                    <option value="Unread">Unread</option>
+                    <option value="Read">Read</option>
+                </select>
+                <input title="input" type="file" id="bookImage" accept="image/*">
+                <button type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./project.js" defer></script>
+
+    
+    <script src="./project.js"></script>
+</body>
+</html>
